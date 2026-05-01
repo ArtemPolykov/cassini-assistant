@@ -6,4 +6,11 @@ service:
   type: ClusterIP
   port: 80
 
-replicaCount: 1
+ingress:
+  enabled: true
+  host: cassini-assistant.online
+  className: traefik
+
+tls:
+  enabled: true
+  secretName: web-tls
